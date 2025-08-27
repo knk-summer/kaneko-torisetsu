@@ -327,10 +327,11 @@ function App() {
           <div id="works">
             <h2>制作物一覧</h2>
             <div css={cssWorksView}>
+              {/* ↓をコンポーネントにする時、indexで照らし合わせて作品情報をモーダル表示させる（クリックイベント） */}
               {
                 works.map((work, index) => (
-                  work.map((item, index) => item?.title && item?.comment ? (
-                    <div css={cssWorkCard}>
+                  work.map((item, itemIndex) => item?.title && item?.comment ? (
+                    <div key={itemIndex} id={item.id} css={cssWorkCard}>
                       <img src={item.img} css={cssImg} alt={item.title} />
                         <div css={cssWorkText}>
                           <h3>{item.title}</h3>
