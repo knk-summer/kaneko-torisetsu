@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+   <link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="css/slider.min.css" rel="stylesheet" media="all">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+   <title>KNK | かねこのポートフォリオ</title>
+   <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+   <div id="wrap">
+      <div id="header">
+         <div id="header_menu" class="clearfix">
+            <a href="index.html">
+               <h1><img src="img/portforio_logo.png" alt="ポートフォリオロゴ" /></h1>
+            </a>
+            <span class="nav_toggle">
+               <i></i>
+               <i></i>
+               <i></i>
+            </span>
+            <div class="nav">
+               <a href="index.html">
+                  <img src="img/portforio_logo.png" alt="ポートフォリオロゴ_メニュー" id="logo_menu" />
+               </a>
+               <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="html/about.html">ABOUT</a></li>
+                  <li><a href="#">WORKS</a>
+                     <ul class="dropdown">
+                        <li><a href="html/works_website.html">WEB SITE</a></li>
+                        <li><a href="html/works_poster.html">POSTER</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div id="main">
+         <ul class="slider" id="slider">
+            <li>
+               <a href="html/works_poster.html">
+                  <picture>
+                     <source media="(max-width: 599px)" srcset="img/top_photo_first_res.jpg" />
+                     <source media="(max-width: 2000px)" srcset="img/top_photo_first.jpg" />
+                     <img src="img/top_photo_first.jpg" alt="Example image">
+                  </picture>
+               </a>
+            </li>
+            <li>
+               <a href="html/works_website.html">
+                  <picture>
+                     <source media="(max-width: 599px)" srcset="img/website_nerikousui_res.jpg" />
+                     <source media="(max-width: 2000px)" srcset="img/top_photo_first2.jpg" />
+                     <img src="img/top_photo_first2.jpg" alt="Example image">
+                  </picture>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <a href="#sentence">
+         <img src="img/button_scroll.png" alt="スクロールボタン" id="scroll" />
+      </a>
+      <div id="sentence">
+         <div id="hataraku" class="clearfix fadeInUpTrigger">
+            <img src="img/ilust_hatarakuriyuu.png" alt="働く理由">
+            <p><span>働く理由は色々あるけど</span></p>
+         </div>
+         <div id="nakama" class="clearfix fadeInUpTrigger">
+            <img src="img/ilust_yuusya.png" alt="勇者" id="yusya">
+            <img src="img/ilust_party_res.png" alt="仲間＿レスポンシブ" id="party_res">
+            <div id="nakama_copy">
+               <h3><span>仲間のために働きたい！</span></h3>
+               <p>例えば商品を企画する人。設計する人。</p>
+               <p>それをもとに製造する人。</p>
+               ”お客様のため”は勿論だけど、<br>
+               一緒に良いものを創ろうとする仲間の伝えたい<br>
+               思い・意図を汲み取ってお客様に届けられたら。<br>
+            </div>
+            <img src="img/ilust_nakama.png" alt="仲間" id="party">
+         </div>
+      </div>
+      <div id="about">
+         <h2><img src="img/about.png" alt="自己紹介" /></h2>
+         <div id="jikoshokai">
+            <img src="img/photo_zikosyoukai.png" alt="自分" />
+            <div id="about_sentence">
+               <div id="name">金子千夏<span>(かねこちなつ)</span></div>
+               <p>1998年8月25日生まれ。</p>
+               <p>山形デザイン専門学校を<br>卒業後、制作会社に入社。</p>
+               <p>色合いの良いデザインや<br>フラットなイラストが得意です。</p>
+               <p>好きなものは女性アイドルと<br>ちいかわと美味しいもの。</p>
+               <p>前職は100円均一の<br>販売スタッフとして働いていました。</p>
+               <div id="skill" class="clearfix">
+                  <img src="img/icon_ai.png" alt="イラストレーター" />
+                  <img src="img/icon_ps.png" alt="フォトショップ" />
+                  <img src="img/icon_dw.png" alt="ドリームウィーバー" />
+                  <img src="img/icon_vs.png" alt="VScode" />
+                  <img src="img/icon_html.png" alt="HTML5" />
+                  <img src="img/icon_css.png" alt="CSS3" />
+                  <img src="img/icon_draw.png" alt="お絵かき" />
+               </div>
+            </div>
+            <a href="html/about.html">
+               <img src="img/button_more.png" alt="もっと詳しく見る" id="more" />
+            </a>
+         </div>
+      </div>
+      <div id="works" class="clearfix">
+         <h2><img src="img/works.png" alt="作品" /></h2>
+         <div id="flexbox">
+            <div class="works_kobetsu">
+               <a href="html/works_website.html#wahuu">
+                  <img src="img/works_kancha.jpg" alt="ポートフォリオサイト" />
+                  <div class="works_shokai">
+                     <p>架空の和風カフェ<br>
+                        「寛茶」のHP</p>
+                  </div>
+               </a>
+            </div>
+            <div class="works_kobetsu">
+               <a href="html/works_website.html#portforio">
+                  <img src="img/works_portforiosite.jpg" alt="ポートフォリオサイト" />
+                  <div class="works_shokai">
+                     <p>ポートフォリオサイト</p>
+                  </div>
+               </a>
+            </div>
+            <div class="works_kobetsu">
+               <a href="html/works_website.html#nerikousui">
+                  <img src="img/works_nerikousui.jpg" alt="架空の練香水ブランド「幽」のwebサイト" />
+                  <div class="works_shokai">
+                     <p>架空の練香水ブランド「幽」の<br>
+                        webサイト</p>
+                  </div>
+               </a>
+            </div>
+            <div class="works_kobetsu">
+               <a href="html/works_poster.html#sotsuten">
+                  <img src="img/works_sotsuten.jpg" alt="学校法人山形デザイン専門学校第44回卒業進級制作展ポスター" />
+                  <div class="works_shokai">
+                     <p>学校法人山形デザイン専門学校<br>
+                        第44回卒業進級制作展ポスター</p>
+                  </div>
+               </a>
+            </div>
+            <div class="works_kobetsu">
+               <a href="html/works_poster.html#nouchiku">
+                  <img src="img/works_nouchiku.jpg" alt="山形市農畜産物フェスティバルポスター" />
+                  <div class="works_shokai">
+                     <p>山形市農畜産物<br>
+                        フェスティバルポスター</p>
+                  </div>
+               </a>
+            </div>
+            <div class="works_kobetsu">
+               <a href="html/works_poster.html#sports">
+                  <img src="img/works_sports.jpg" alt="スポーツフェスタポスター" />
+                  <div class="works_shokai">
+                     <p>スポーツフェスタポスター</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div id="footer">
+         <div id="footer_menu" class="clearfix">
+            <a href="index.html">
+               <img src="img/logo_portforio_footer.png" alt="ポートフォリオロゴ＿フッター" />
+            </a>
+            <ul>
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="html/about.html">ABOUT</a></li>
+               <li>WORKS</li>
+            </ul>
+            <ul id="sub_nav">
+               <span></span>
+               <li><a href="html/works_website.html">WEB SITE</a></li>
+               <li><a href="html/works_poster.html">POSTER</a></li>
+            </ul>
+            <p>@2022 Chinatsu Kaneko.</p>
+         </div>
+      </div>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="js/3-2-3-1.js"></script>
+   <script src="js/hamburger.js"></script>
+   <script src="js/slider.js"></script>
+   <script type="text/javascript">
+      $(window).on("load", function () {
+         $("#slider").slider();
+      });
+   </script>
+</body>
+
+</html>

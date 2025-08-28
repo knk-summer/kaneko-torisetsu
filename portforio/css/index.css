@@ -1,0 +1,811 @@
+
+html { scroll-behavior: smooth;}
+body{ 
+    font-family: '筑紫A丸ゴシック','Zen Maru Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    background-color: #fafafa;
+    min-width: 1400px;
+    overflow: hidden;
+}
+#header{
+    width: 1400px;
+    padding-top: 64px;
+    padding-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative; 
+}
+h1{
+    float: left;
+}
+.nav_toggle {
+    display: none;
+}
+#logo_menu{
+    display: none;
+}
+#header_menu ul{
+    position: absolute; 
+    right: 0;
+}
+#header_menu li {
+    margin-left:80px;
+    margin-top: 12px;
+    margin-bottom:4px;
+    float: left;
+    font-size: 23px;
+    list-style: none;
+    border-bottom: solid 1px #333333;
+}
+#header_menu li a{
+    color: #333333;
+    padding-bottom:4px;
+    text-decoration: none; 
+    display: block;
+}
+#header_menu li a:hover{
+    background: rgba(254, 224, 136,0.9);
+}
+.dropdown{
+    display: none;
+    z-index: 1;
+}
+#header_menu li:hover .dropdown{
+    display: block;
+    width: 160px;
+    top: auto;
+    right: auto;
+}
+#header_menu .dropdown li{
+    width: 120px;
+    margin-left:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom:none;
+    background-color: #e6e6e6;
+}
+#header_menu .dropdown li a:hover{
+    color: #ffffff;
+    background-color: #333333;
+}
+
+#main{
+    text-align: center;
+}
+#scroll{
+    margin-top: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: yazirushi;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+@keyframes yazirushi {
+    0% {
+        transform: translate(0,0px);
+    }
+
+    100% {
+        transform: translate(0,-15px)
+    }
+}
+
+#sentence{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+}
+#sentence span{
+    background: linear-gradient(transparent 40%, rgba(254, 224, 136,0.9) 40%);
+}
+#hataraku p{
+    font-size: 28px;
+    margin-left: 152px;
+    margin-top: 192px;
+    float: left;
+}
+#hataraku img{
+    margin-left: 8%;
+    float: left;
+}
+#hataraku{
+    margin-top: 272px;
+    margin-bottom: 272px;
+}
+#nakama_copy{
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 64px;
+    margin-top: 132px;
+    float: left;
+}
+#yusya{
+    float: left;
+    margin-left: 48px;
+    margin-top: 54px;
+}
+#party_res{
+    display: none;
+}
+#party{
+    float: left;
+}
+#nakama h3{
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+#about{
+    margin-top: 232px;
+    margin-bottom: 232px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+#jikoshokai{
+    width: 1200px;
+    height: 600px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    border: solid 1px #333333;
+    box-shadow: 16px 16px #cccccc;
+    position: relative;
+}
+#jikoshokai img{
+    margin-left: 80px;
+    margin-top: 96px;
+    float: left;
+}
+#skill img{
+    width: auto;
+    height: 60px;
+    margin-left: 0;
+    margin-right: 16px;
+    margin-top: 32px;
+}
+#about_sentence{
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 144px;
+    margin-left: 80px;
+    float: left;
+}
+#about_sentence br{
+    display: none;
+}
+#name{
+    font-size: 23px;
+    margin-bottom: 24px;
+}
+#name span{
+    font-size: 12px;
+}
+#more{
+    padding: 16px 28px;
+    position: absolute;
+    right: -20px;
+    top: 400px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+    to right,
+    #fee088 0%,
+    #fee088 50%,
+    #333333 50%,
+    #333333 100%
+  );
+    transition: background-position ease 0.4s;
+}
+#more:hover {
+    background-position: 0 0;
+}
+
+#works{
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 160px;
+}
+#works h2{
+    margin-bottom: 32px;
+}
+#flexbox{
+    display: flex;
+    width: 1400px;
+    flex-wrap: wrap;  
+}
+.works_kobetsu{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    float: left;
+    position: relative;
+}
+.works_kobetsu:hover{
+    transform: scale(1.1);
+    transition-duration:0.5s;
+}
+.works_shokai{
+    width: 360px;
+    height: 120px;
+    color: #ffffff;
+    bottom: 0px;
+    background-color:#333333; 
+    display: flex;
+    position: absolute;
+}
+.works_shokai p{
+    margin:auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#footer{
+    height: 120px;
+    background-color:#333333; 
+    position: relative;
+}
+#footer img{
+    margin-right: 232px;
+    text-align: center;
+    float: left;
+}
+
+#footer_menu{
+    width: 1000px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: left;
+    position: relative; 
+}
+#footer_menu ul{
+    margin-top: 16px;
+    width: 700px;
+    top: 36px;
+    right: 0;
+    position: absolute;
+}
+#footer_menu li {
+    margin-left:62px;
+    margin-bottom:4px;
+    float: left;
+    font-size: 20px;
+    list-style: none;
+    color: #ffffff;
+}
+#footer_menu li a{
+    color: #ffffff;
+    padding-bottom:4px;
+    text-decoration: none; 
+    display: block;
+}
+#footer_menu li a:hover{
+    color: #cccccc;
+}
+#sub_nav{
+    margin-top: 4px;
+    position: absolute;
+    left: 696px;
+    display: block;
+}
+#sub_nav span{
+    float: left;
+    background-color: #ffffff;
+    right: 240px;
+    width: 1px;
+    height: 20px;
+    margin-top: 0px;
+}
+#sub_nav li{
+    font-size: 15px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 20px;
+}
+#footer_menu p{
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    clear: both;
+    position: absolute;
+    left: 43%;
+    bottom: -24px;
+}
+
+.fadeInUpTrigger{
+opacity: 0;
+}
+
+.fadeIn {
+    animation-name: fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}  
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+@media screen and (max-width: 1399px) {
+	/* 1399px以下に適用されるCSS（PC用） */
+    #wrap{
+        min-width: 600px;   
+    }
+    #header{
+        width: 560px;    
+    }  
+    #header_menu li{
+        margin-left: 40px;
+    }
+    #sentence{
+        width: 600px;
+    }
+    #hataraku p{
+        margin-top: 48px;
+    }
+    #hataraku img{
+        width: 568px;
+        margin-left: 24px;
+        
+    }
+    #hataraku{
+        margin-top: 80px;
+        margin-bottom: 240px;
+    }
+    #nakama{
+        width: 600px;
+        padding-bottom: 240px;
+    }
+    #yusya{
+        position: relative;
+        width:272px;
+        margin-left: 0;
+    }
+    #party{
+        position: absolute;
+        width:328px;
+        clear: left;
+        top: 14px;
+        left: 45%;
+    }
+    #nakama_copy{
+        position: absolute;
+        margin-left: 0;
+        width: 440px;
+        clear: left;
+        top: 200px;
+        left: 108px;
+    }
+    #about{
+        width: 600px;
+        
+    }
+    #jikoshokai{
+        width: 480px;
+        height: 1150px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #jikoshokai img{
+        margin-top: 80px;
+        text-align: center;
+        float: none;
+}
+    #about_sentence{
+        width: 500px;
+        text-align: center;
+        display: block;
+        float: none;
+        margin-top: 64px;
+        margin-left: 0px;
+        font-size: 19px;
+        line-height: 34px;
+    }
+    #skill img{
+        float: left;
+        margin-right: 6px;
+        margin-left: 6px;
+        margin-top: 16px;
+    }
+    #skill{ 
+        max-width: 340px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px;
+    }
+    #more{
+        margin-right: 20px;
+        top: 930px;
+        right: 88px;
+    }
+    #works{
+        width: 600px;
+    }
+    #flexbox{
+        width: 600px;
+    }
+    .works_kobetsu img{
+        width:270px; 
+    }
+    .works_kobetsu{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .works_shokai{
+        width:270px; 
+    }
+    .works_shokai p{
+        font-size:17px; 
+    }
+    #footer{
+        height: 180px;
+        position: static;
+    }
+    #footer img{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+    #footer_menu {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #footer_menu ul{
+        top: 90px;
+        left: 0px;
+        margin-left: 44px;
+        margin-right: auto;
+    }
+    #footer_menu li{
+        margin-left: 32px;
+        font-size: 18px; 
+    }
+    #footer_menu #sub_nav{
+        top: 90px;
+        left: 280px;
+    }
+    #sub_nav span{
+        left: 240px;
+        right: 0px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    #sub_nav li{
+        font-size: 15px; 
+        margin-left: 4px;
+        margin-right: 24px;
+        margin-top: 4px;
+    }
+    #footer_menu p{
+        padding-top: 40px;
+        position: static;
+    }
+}
+@media screen and (max-width: 599px) {
+    /* 599px以下に適用されるCSS（スマホ用） */
+    #wrap{
+        min-width: 320px;   
+    }
+    #header{
+        width: 80%;
+    }
+    .nav_toggle {
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;    
+        z-index: 3;
+        left: 96%;
+}
+    .nav_toggle:hover{
+        cursor: pointer;
+    }
+    #logo_menu{
+        display: block;
+        margin-left: 40px;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+   .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+}
+   .nav_toggle i:nth-child(1) {
+        top: 0;
+}
+   .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+}
+   .nav_toggle i:nth-child(3) {
+        bottom: 0;
+}
+   .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+}
+   .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+}
+   .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+}
+    
+   #header_menu ul{
+        position: static; 
+}
+   #header_menu li {
+        width: 96px;
+        margin-left: 64px;
+        margin-top: 40px;
+        float: none;
+        font-size: 25px;
+        list-style: none;
+        border: none;
+}
+   #header_menu li a{
+        border-bottom: solid 1px #333333;
+    }
+   #header_menu li a:hover{
+        background: none;
+}
+   .dropdown{
+        display: block;
+        border-left: solid 1px #333333;
+        margin-left: 8px;
+        margin-top: 24px;
+}
+   #header_menu li:hover .dropdown{
+        display: block;
+        width: 160px;
+        top: auto;
+        right: auto;
+}
+   #header_menu .dropdown li{
+        margin-top: 16px;
+        margin-left: 8px;
+        color: #333333;
+        background-color: #ffffff;
+        font-size: 21px;
+}
+   #header_menu .dropdown li a{
+        border: none;
+    }
+   #header_menu .dropdown li a:hover{
+        color: #333333;
+        background-color: #ffffff;
+}
+
+   .nav {
+        position: absolute;
+        top: 0;
+        left: 24%;
+        bottom: 0;
+        padding-top: 160px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+}
+   .nav.show {
+        opacity: 1;
+        visibility: visible;
+}
+
+    #sentence{
+        width: auto;
+        padding-top: 60px;
+    }
+    #hataraku p{
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 6%;
+        text-align: center;
+        float: none;
+    }
+    #hataraku img{
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        display: block;
+        float: none;
+    }
+    #hataraku {
+        margin-bottom: 32%;
+    }
+    #nakama{
+        width: auto;
+        padding-top:10%;
+        padding-bottom: 0px;
+    }
+    #yusya{
+        display: none;
+    }
+    #party{
+        display: none;
+    }
+    #nakama img{
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        float: none;
+    }
+    #party_res{
+        display: block;
+    }
+    #nakama_copy{
+        width: 286px;
+        font-size: 13px;
+        position: static;
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 23px;
+        display: block;
+        float: none;
+    }
+    #nakama h3{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    #about{
+        max-width: 95%;
+        margin-top: 42%;
+    }
+    h2{
+        margin-right: 16px;
+        text-align: center;
+    }
+    #jikoshokai{
+        width: 280px;
+        height:1040px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 8px 8px #cccccc;
+    }
+    #jikoshokai img{
+        max-width: 240px;
+        margin-left: 20px;
+        margin-top: 62px;
+        text-align: center;
+        float: none;
+}
+    #about_sentence br{
+        display: inline;
+}
+    #name{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    #about_sentence{
+        width: 280px;
+        text-align: center;
+        display: block;
+        float: none;
+        margin-top: 48px;
+        margin-left: 4px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    #skill img{
+        width: auto;
+        height: 50px;
+        float: left;
+        margin-right: 6px;
+        margin-left: 6px;
+        margin-top: 8px;
+    }
+    #skill{ 
+        width: 280px;
+        display: block;
+        margin-left: 12px;
+        margin-right: auto;
+        margin-top: 16px;
+    }
+    #more{
+        width: 60%;
+        top: 850px;
+        right: 11px;
+        margin-bottom: 80px;
+    }
+    #works{
+        width: 300px;
+        margin-bottom: 48px;
+        margin-top: -40px;
+    }
+    #works h2{
+        margin-bottom: 20px;
+    }
+    #flexbox{
+        width: 320px;
+    }
+    #footer{
+        width: auto;
+        height: 300px;
+    }
+    #footer img{
+        margin-bottom: 8px;
+    }
+    #footer_menu{
+        width: 300px;
+    }
+    #footer_menu ul{
+        width: 180px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 28px;
+        border-bottom: solid 1px #ffffff;
+    }
+    #footer_menu li{
+        width: 180px;
+        font-size: 22px;
+        margin-left: 0;
+        margin-bottom: 6px;
+        padding-top: 8px;
+        text-align: center;
+        border-top: solid 1px #fafafa;
+    }
+    #footer_menu #sub_nav{
+        width: 200px;
+        top: 210px;
+        left: 32px;
+        border: none;
+
+    }
+    #sub_nav span{
+        display: none;
+    }
+    #sub_nav li{
+        width: auto;
+        font-size: 17px;
+        margin-top: px;
+        margin-right: 18px;
+        margin-bottom: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border: none;
+    }
+    #footer_menu p{
+        padding-top: 170px;
+    }
+    }

@@ -1,0 +1,561 @@
+
+#wrap
+{
+    position: relative;
+    line-height: 0;
+    color: #51596a;
+}
+#header
+{
+    height: 180px;
+    width: 100%;
+    background-image: url(../img/header_back_pattern.png);
+    background-repeat: repeat-x;
+    background-size: auto;
+    position: fixed;
+    z-index: 1;
+}
+
+#menu_icon{
+    left: 0px;
+    margin-left: 5%;
+    margin-top:68px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+#menu{
+      position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*メニューの中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 400px;/*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+#nav-content ul,#menu_logo{
+    font-size: 25px;
+    margin-top: 100px; 
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+#nav-content li{
+    margin-top: 70px;
+    list-style: none;
+}
+#nav-content li a{
+    text-decoration: none;
+    color: #96a9bb;
+}
+#nav-content li a:hover{
+    color: #e69aa6;
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.header-logo-menu{
+ display: flex;
+ display: -moz-flex;
+ display: -o-flex;
+ display: -webkit-flex;
+ display: -ms-flex;
+ flex-direction: row;
+ -moz-flex-direction: row;
+ -o-flex-direction: row;
+ -webkit-flex-direction: row;
+ -ms-flex-direction: row;
+}
+
+h1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#sns{ 
+    position:absolute;
+    right: 0px;
+    margin-right: 5%;
+    top: 30%;
+    }
+
+#online_icon,#insta_icon{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#online_icon,#insta_icon,#twitter_icon{
+    cursor: pointer;
+}
+
+#main{
+    width: 100%;
+    line-height: 0px;
+}
+#copy{
+    text-align: center;
+    line-height: 36px;
+    margin: 0px;
+    height: 584px;
+    background-color: #ffffff;
+    font-size:18px;
+}
+#copy h2{ 
+    font-weight: normal;
+    font-size:30px;
+    padding-top: 80px;
+    margin-bottom: 50px;
+}
+#copy p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.kaigyou{
+    display: none;
+}
+#about{
+    padding-top: 108px;
+    padding-bottom: 108px;
+    background-color: #b0c9d4;
+}
+#about_sentence{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 752px;
+    height: 728px;
+    background-color: #ffffff;
+}
+
+#about_setsumei{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 752px;
+    clear: both;
+}
+.about_danraku{
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 32px;
+}
+#about_sentence h4{
+    font-weight: normal;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 240px;
+    background-color: #96a9bb
+}
+.hokanimo{
+    color: #96a9bb;
+    font-size:16px; 
+}
+.about_rei{
+    float: left;
+    margin-right: 42px;
+}
+#about_sentence .about_rei p{
+    font-size:16px; 
+    text-align: center;
+    margin-top: 24px;
+}
+body h3{
+    font-weight: normal;
+    text-align: center;
+    padding-top: 130px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+#products{
+    height:auto;
+    background-color: #ffffff;
+}
+#products_zentai{
+    max-width: 1448px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 144px;
+}
+
+.products_kobetsu{
+    position: relative;
+    line-height:20px;
+    float: left;
+    width: 360px;
+    margin-left: 92px;
+    color: #000000;
+}
+
+.products_setsumei{
+    margin-top: 12px;
+    margin-bottom: 6px;
+    border-bottom: solid 1px #000000;
+}
+.nedan{
+    position: absolute;
+    right: 44px;
+    float: right;
+    font-size: 18px;
+}
+.zeikomi{
+    position: absolute;
+    right: 0;
+    float: right;
+    font-size: 12px;
+}
+.online_botan{
+    float: right;
+    margin-top: 24px;
+    margin-bottom: 96px;
+    cursor: pointer;
+}
+#shop{
+    background-image: url(../img/shop.png);
+    width: 100%;
+    clear: both;
+}
+#shop h3{
+    color: #ffffff;
+}
+#shop_zentai{
+    margin-top: 72px;
+    padding-bottom: 72px;
+}
+.shop_list{
+    font-size: 27px;
+    line-height: 28px;
+    height: 20px;
+    width: 842px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left: 88px;
+    background-color: rgba( 255, 255, 255, 0.9);
+}
+.shop_url{
+    float: left;
+    text-align: left;
+    padding-left: 88px;
+    text-decoration: none;
+    color: #96a9bb;
+}
+.shop_url:hover{
+    color: #e69aa6;
+}
+.shop_tenmei{
+    float: left;
+    width: 177px;
+}
+#news{
+    height: 440px;
+    background-color: #e0ecf1;
+}
+#news p{
+    cursor: pointer;
+}
+#news_honbun{
+    font-size: 20px;
+    line-height: 20px;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+    display: flex;
+    justify-content: space-between;
+}
+#footer{
+    font-size: 19px;
+    line-height: 20px;
+    height: 320px;
+    background-color: #ffffff;
+    color: #96a9bb;
+}
+#footer a{
+    text-decoration: none;
+    color: #96a9bb;
+}
+#footer a:hover{
+    color: #e69aa6;
+}
+#footer_zentai{
+    clear: left;
+    width: 930px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:110px;
+    padding-bottom: 110px;
+}
+#logo_footer{
+    float: left;
+    margin-right: 100px;
+    margin-top: 14px;
+}
+#footer_nav ul{
+    float: left;
+    width: 270px;
+}
+#footer_nav li{   
+    width: 103px;
+    padding-left: 30px;
+}
+#footer_nav_policy ul{
+    float: left;
+    width: 500px;
+    border-left:  solid 2px #96a9bb;
+}
+#footer_nav_policy li{
+    margin-left: 50px;
+    cursor: pointer;
+}
+#footer_nav_policy li:hover{
+    color: #e69aa6;
+}
+#footer_zentai li{
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.policy_mizikai li{
+    width: 120px;
+}
+
+.fadeInUpTrigger{
+opacity: 0;
+}
+
+.fadeIn{
+    animation-name: fadeUpAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}   
+
+.clearfix:after {
+    content: "";         /* 擬似要素を実体化 */
+    clear: both;        /* floatを解除する */
+    display: block;     /* ブロック要素にする */
+}
+
+@media screen and (max-width: 599px) {
+	/* 599px以下に適用されるCSS（スマホ用） */
+    html{
+        width: 100%;
+    }
+    #header{
+        height: 60px;
+        width: 100%;
+    }
+    #header img,#sns img{
+         max-width:60%;
+    }
+    #twitter_icon,#insta_icon{
+        display: none;
+        max-width: 80%;
+    }
+    #online_icon{
+        margin-right: 0;
+        width: 33px;    
+    }
+    #menu_icon{
+        width: 33px;
+        margin-top: 17px;
+        max-width: 20px;
+    }
+    #copy{
+        display: block;
+        font-size: 16px;
+        height: auto;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #copy h2{
+        font-size: 24px;
+        padding-top: 50px;
+    }
+    .kaigyou{
+        display: block;
+    }
+    .about_danraku{
+        font-size: 16px;
+    }
+    #about_sentence{
+        width:80%;
+        padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 4%;
+    padding-right: 4%;
+    height: auto;    
+        
+    }
+    .about_rei{
+        float: none;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about_rei p{
+        line-height: 20px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    #about_setsumei{
+        max-width: 90%;
+        height: auto;
+    }
+    .products_kobetsu{
+        float: none;
+        max-width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .products_kobetsu img{
+        max-width: 100%;
+    }
+    .shop_list{
+        max-width: 80%;
+        height: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 20px;
+    }
+    .shop_tenmei,.shop_url{
+        display: block;
+        font-size: 16px;
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    #news_honbun{
+        font-size: 18px;
+        max-width: 85%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: block;
+        text-align: center;  
+    }
+    #news_honbun p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #footer{
+        height: auto;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    #footer_zentai{
+        width: auto;
+        padding-top: 15px;
+    }
+    #logo_footer{
+        display: block;
+        width: 40px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #footer_nav{
+        display: none;
+    }
+    #footer_nav_policy{
+        float: none;
+    }
+    #footer_nav_policy ul{
+        float: none;
+        border-left: none;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #footer_nav_policy li{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    margin-left: 5px;
+        
+    }
+}
