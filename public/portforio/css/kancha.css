@@ -1,0 +1,988 @@
+body,
+#wrap {
+    width: 100vw;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+#concept h3,
+#menu h3,
+h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+}
+
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-image: url(../img/paper.jpg);
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 272px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main {
+    background-color: #bccb6d;
+    height: 1080px;
+    width: 100vw;
+    position: relative;
+}
+
+#main_photo {
+    display: none;
+}
+
+#first {
+    background: linear-gradient(#58a06e, #bccb6d);
+    width: 320px;
+    height: 900px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 4;
+}
+
+#movie {
+    z-index: -1;
+    width: 100%;
+    height: 900px;
+}
+
+#movie>video {
+    position: absolute;
+    top: 0%;
+    left: 320px;
+    min-width: 100%;
+    min-height: 100%;
+    height: 900px;
+}
+
+h2 p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    font-weight: 200;
+    color: rgb(0, 44, 2);
+    letter-spacing: 0.2em;
+    line-height: 40px;
+    text-align: center;
+    width: 80px;
+    height: 288px;
+}
+
+#gnav {
+    position: absolute;
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 5;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    border-radius: 50%;
+    background-color: #251b0f;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 25px;
+    margin-top: 20px;
+    background: #ffffff;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 20px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+    top: 20px;
+    left: 25px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.6s;
+    width: 100vw;
+    height: 100vh;
+}
+
+nav.globalMenuSp ul {
+    margin: 35vh auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav.globalMenuSp ul li {
+    list-style-type: none;
+    font-size: 22px;
+    padding: 0;
+    width: 100%;
+}
+
+nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+nav.globalMenuSp ul li a {
+    display: block;
+    color: #25130f;
+    padding: 1em 0;
+    text-decoration: none;
+}
+
+nav.globalMenuSp ul li a:hover {
+    color: #bccb6d;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    transform: translateX(0%);
+}
+
+h1 img {
+    width: 136px;
+    margin-top: 80px;
+}
+
+/*ヘッダー通過後に表示するハンバーガーメニューのボタン*/
+button {
+    position: fixed;
+    transition: .3s;
+    opacity: 0;
+    display: block;
+
+}
+
+#gnav_mein .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin-top: 0;
+    background-color: #25130f;
+    border-radius: 0%;
+}
+
+/*スクロールで見えるように*/
+.view {
+    left: 20px;
+    transition: .3s;
+    opacity: 1;
+}
+
+#concept {
+    background-image: url(../img/paper.jpg);
+    width: 100vw;
+    z-index: -2;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+#nami {
+    max-width: 100%;
+}
+
+#concept h3 {
+    position: relative;
+    padding-top: 240px;
+    font-size: 30px;
+    text-align: center;
+    z-index: 2;
+}
+
+#line_ue {
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    width: 100%;
+}
+
+#concept_kancha {
+    position: relative;
+    display: flex;
+    width: 1440px;
+    margin-top: -160px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    /*縦の中央寄せ*/
+}
+
+#kancha_photo {
+    position: static;
+    max-width: 100%;
+    margin-right: 80px;
+}
+
+.setsumei h4 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+#kancha_setsumei {
+    align-self: center;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 320px;
+    position: static;
+    width: 50vw;
+}
+
+#concept br {
+    display: none;
+}
+
+#line_shita {
+    position: absolute;
+    z-index: -1;
+    top: 58%;
+    width: 100%;
+}
+
+#concept_kodawari {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 160px;
+}
+
+#kodawari_photo {
+    position: static;
+    max-width: 100%;
+}
+
+#kodawari_setsumei {
+    margin-left: 80px;
+    margin-right: 48px;
+    margin-top: 160px;
+    width: 50vw;
+    font-size: 15px;
+    line-height: 30px;
+    position: static;
+    text-align: right;
+
+}
+
+.bg {
+    background: url(../img/haikei_maccha.jpg) no-repeat fixed;
+    height: 400px;
+    max-width: 100%;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* 背景画像をフルスクリーンにフィットさせます */
+}
+
+.bg.img2 {
+    background-image: url(../img/haikei_cafe.jpg);
+}
+
+.bg img {
+    display: none;
+}
+
+/* ipad用の挙動 */
+.ipad .bg {
+    background: none;
+    height: auto;
+}
+
+.ipad .bg img {
+    display: block;
+    max-width: 100%;
+}
+
+.ipad .bg.img2 {
+    background: none;
+}
+
+#menu {
+    background: url(../img/paper.jpg);
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#menu h3 {
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 0 45px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    background: linear-gradient(#58a06e, #bccb6d);
+    letter-spacing: 0.2em;
+    z-index: 2;
+}
+
+.slider-text {
+    font-size: 15px;
+    line-height: 18px;
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-text img {
+    margin-bottom: 62px;
+}
+
+.slick-inner h4 {
+    font-size: 20px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #25130f;
+}
+
+.menu_hinmoku {
+    width: 288px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nedan {
+    font-size: 13px;
+}
+
+.zeikomi {
+    font-size: 11px;
+}
+
+#store {
+    background: linear-gradient(#bccb6d, #58a06e);
+    height: 720px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#store_info {
+    width: 50vw;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+    width: 472px;
+    height: 320px;
+}
+
+#store_info br {
+    display: none;
+}
+
+#store_info h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+
+.store_contents {
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 26px;
+}
+
+/* SNSのボタンアニメーション */
+.sns {
+    width: 216px;
+    height: 48px;
+    margin: 20px 20px 16px 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    z-index: 0;
+}
+
+.sns a {
+    text-decoration: none;
+    color: #fff;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+svg rect,
+svg path,
+svg polyline {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.sns:hover svg rect {
+    stroke: #fff;
+}
+
+/* Basic Box */
+svg rect {
+    stroke-dasharray: 400, 0;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+
+.sns:hover svg rect {
+    stroke-width: 3;
+    stroke-dasharray: 48, 216;
+    stroke-dashoffset: 38;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+
+#store iframe {
+    width: 50vw;
+    height: auto;
+}
+
+#footer {
+    padding: 53px 0;
+    background-color: #25130f;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media screen and (max-width:1499px) {
+    #first {
+        width: 240px;
+    }
+
+    #movie>video {
+        left: 240px;
+    }
+
+    #concept_kancha {
+        width: auto;
+        margin-top: -40px;
+    }
+
+    #kancha_photo {
+        max-width: 60%;
+        margin-right: 48px;
+    }
+
+    .setsumei h4 {
+        font-size: 20px;
+    }
+
+    #kancha_setsumei {
+        font-size: 13px;
+        margin-top: 20%;
+    }
+
+    #concept_kodawari {
+        align-items: center;
+    }
+
+    #kodawari_photo {
+        max-width: 60%;
+    }
+
+    #kodawari_setsumei {
+        font-size: 13px;
+        margin-right: 24px;
+        margin-top: -7%;
+    }
+
+    #store_info {
+        width: 400px;
+    }
+
+    .store_contents {
+        font-size: 13px;
+    }
+
+    .sns {
+        width: 400px;
+        float: none;
+    }
+
+    svg {
+        width: 400px;
+    }
+
+    svg rect,
+    svg path,
+    svg polyline {
+        width: 100%;
+    }
+
+    .sns:hover svg rect {
+        stroke-dasharray: 48, 400;
+    }
+}
+
+@media screen and (max-width:959px) {
+
+    #main {
+        height: auto;
+    }
+
+    #movie {
+        display: none;
+    }
+
+    #main_photo {
+        display: block;
+        position: relative;
+        top: 140px;
+        width: 100%;
+        padding-top: 112.5%;
+        overflow: hidden;
+        background-color: #c6c6c6;
+    }
+
+    @keyframes slideshow {
+        0% {
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        28% {
+            opacity: 1
+        }
+
+        38% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .res_photo {
+        position: absolute;
+        top: 0%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        animation: slideshow 24s linear infinite;
+    }
+
+    .res_photo:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .res_photo:nth-child(2) {
+        animation-delay: 8s;
+    }
+
+    .res_photo:nth-child(3) {
+        animation-delay: 16s;
+    }
+
+    #main_photo h1 img {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+    }
+
+    header h1 img {
+        display: none;
+    }
+
+    #first {
+        background: linear-gradient(#58a06e, #bccb6d);
+        width: 100%;
+        height: 140px;
+        text-align: center;
+        display: block;
+        position: absolute;
+    }
+
+    h2 p {
+        position: absolute;
+        bottom: 40px;
+        left: 160px;
+        writing-mode: horizontal-tb;
+        font-size: 15px;
+        line-height: 30px;
+        text-align: left;
+        width: 280px;
+        height: auto;
+    }
+
+    .hamburger {
+        top: -50px;
+        margin-left: 40px;
+    }
+
+    #gnav_mein .hamburger {
+        margin-left: 0;
+    }
+
+    #nami {
+        position: relative;
+        top: 120px;
+        z-index: 3;
+        left: -900px;
+        max-width: initial;
+    }
+
+    #concept h3 {
+        font-size: 26px;
+    }
+
+    #line_ue {
+        top: 50%;
+    }
+
+    #line_shita {
+        top: 90%;
+    }
+
+    #concept_kancha {
+        display: inline;
+    }
+
+    #kancha_setsumei {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        width: 360px;
+    }
+
+    #kancha_photo {
+        max-width: 97%;
+        margin-top: -80px
+    }
+
+    #concept_kodawari {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: inline;
+    }
+
+    .setsumei h4 {
+        font-size: 22px;
+    }
+
+    #kodawari_photo {
+        position: relative;
+        max-width: 100%;
+        margin-top: 24%;
+        order: 1;
+        z-index: -1;
+    }
+
+    #kodawari_setsumei {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -12%;
+        margin-bottom: 120px;
+        width: 360px;
+        text-align: left;
+    }
+
+    .bg{
+        height: 240px;
+    }
+
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+    .fadeUpTrigger {
+        opacity: 0;
+    }
+
+    #menu {
+        padding-top: 80px;
+    }
+
+    #menu h3 {
+        color: #ffffff;
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: auto;
+        padding: 32px 0;
+        writing-mode: horizontal-tb;
+        text-align: center;
+        background: linear-gradient(#58a06e, #bccb6d);
+        letter-spacing: 0.2em;
+        z-index: 2;
+        margin-top: 80px;
+    }
+
+    /* カルーセル部分は6-1-7.cssに記載 */
+
+    #store {
+        height: auto;
+        display: block;
+
+    }
+
+    #store_info {
+        display: block;
+        width: 400px;
+        height: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        padding-top: 80px;
+    }
+
+    #store iframe {
+        width: 100vw;
+        height: 360px;
+    }
+}
+
+@media screen and (max-width:519px) {
+    #first {
+        height: 120px;
+    }
+
+    #main_photo {
+        top: 120px;
+    }
+
+    h2 p {
+        bottom: 38px;
+        left: 92px;
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: 0.14em;
+        width: 240px;
+    }
+
+    .hamburger {
+        margin-left: 16px;
+        top: -52px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .hamburger span {
+        width: 24px;
+        left: 18px;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0px;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 8px;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 16px;
+    }
+
+    /* ナビ開いてる時のボタン */
+    .hamburger.active span:nth-child(1) {
+        top: 10px;
+        left: 18px;
+    }
+
+    .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(3) {
+        top: 10px;
+        left: 18px;
+    }
+
+    #gnav_mein .hamburger {
+        width: 64px;
+        height: 64px;
+        z-index: 4;
+    }
+
+    #nami {
+        position: relative;
+        top: 120px;
+        z-index: 3;
+        left: -1000px;
+        max-width: initial;
+    }
+
+    #main_photo h1 img {
+        width: 20%;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    #kancha_setsumei br,
+    #kodawari_setsumei br {
+        display: inline;
+    }
+
+    .setsumei h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    #kancha_photo {
+        max-width: 100%;
+        margin-top: -80px
+    }
+
+    #kancha_setsumei {
+        font-size: 13px;
+        width: 222px;
+    }
+
+    #kodawari_setsumei {
+        font-size: 13px;
+        width: 248px;
+    }
+
+    /* パララックスを無くす */
+    .bg {
+        background: none;
+        height: auto;
+    }
+
+    .bg img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .bg.img2 {
+        background: none;
+    }
+
+    /* カルーセル部分は6-1-7.cssに記載 */
+
+    #store_info {
+        width: 240px;
+        height: 560px;
+        padding-top: 80px;
+    }
+
+    #store_info br {
+        display: block;
+    }
+
+    .sns {
+        width: 240px;
+    }
+
+    svg {
+        width: 240px;
+    }
+
+    .sns:hover svg rect {
+        stroke-dasharray: 48, 240;
+    }
+}

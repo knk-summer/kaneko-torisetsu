@@ -1,0 +1,99 @@
+.sentence_web{
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.honbun_web{
+    margin-bottom: 32px;
+}
+.sakuhin_web h3{
+    margin-bottom: 64px;
+    text-align: center;
+}
+.sakuhin_web h4{
+    font-size: 24px;
+    text-align: left;
+    line-height: 38px;
+}
+.settei_web h5{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 26px;
+    margin-bottom: 4px;
+}
+
+.settei_web p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.settei_web{
+    margin-top: 24px;
+}
+
+#button_web{    
+    margin-top: 40px;
+    padding: 4px 22px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+    to right,
+    #fee088 0%,
+    #fee088 50%,
+    #333333 50%,
+    #333333 100%
+  );
+    transition: background-position ease 0.4s;
+}
+#button_web:hover {
+    background-position: 0 0;
+}
+.c-marker {
+    background: -webkit-linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background: -moz-linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background: linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% .8em; 
+    background-position: 100% .5em;
+    transition: 0.8s;    
+}
+.c-marker.is-active{
+    background-position: 0% .5em;
+}
+
+@media screen and (max-width: 1399px){
+    .sentence_web{
+        width: 90%;
+    }
+    .sakuhin_web h4{
+        font-size: 20px;
+    }
+    .settei_web h5{
+        font-size: 18px;
+    }
+    .settei_web p{
+        font-size: 16px;
+    }
+} 
+
+@media screen and (max-width: 599px){
+    #button_web{
+        display: block;
+        width: 144px;
+        margin-top: 40px;
+    }
+    .sakuhin_web h4{
+        font-size: 16px;
+        line-height: 28px
+    }
+    .settei_web h5{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .settei_web p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+} 

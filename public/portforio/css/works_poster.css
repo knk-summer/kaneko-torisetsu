@@ -1,0 +1,694 @@
+html { scroll-behavior: smooth;}
+body{ 
+    font-family: '筑紫A丸ゴシック','Zen Maru Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    background-color: #fafafa;
+    min-width: 1400px;
+    overflow: hidden;
+}
+#header{
+    width: 1400px;
+    padding-top: 64px;
+    padding-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative; 
+}
+h1{
+    float: left;
+}
+.nav_toggle {
+    display: none;
+}
+#logo_menu{
+    display: none;
+}
+#header_menu ul{
+    position: absolute; 
+    right: 0;
+}
+#header_menu li {
+    margin-left:80px;
+    margin-bottom:4px;
+    float: left;
+    font-size: 23px;
+    list-style: none;
+    border-bottom: solid 1px #333333;
+}
+#header_menu li a{
+    color: #333333;
+    padding-bottom:4px;
+    text-decoration: none; 
+    display: block;
+}
+#header_menu li a:hover{
+    background: rgba(254, 224, 136,0.9);
+}
+.dropdown{
+    display: none;
+    z-index: 1;
+}
+#header_menu li:hover .dropdown{
+    display: block;
+    width: 160px;
+    top: auto;
+    right: auto;
+}
+#header_menu .dropdown li{
+    width: 120px;
+    margin-left:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom:none;
+    background-color: #e6e6e6;
+}
+#header_menu .dropdown li a:hover{
+    color: #ffffff;
+    background-color: #333333;
+}
+h2 img{
+    margin: 88px auto;
+    display: block;
+}
+#main{
+    margin-bottom: 256px;
+}
+#porster_first{
+    width: 100%;
+}
+#porster_first_res{
+    display: none;
+}
+#wrap h3{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 46px;
+}
+#sotsuten{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 256px;
+    display: flex;
+    justify-content: space-between;
+}
+.c-marker {
+    font-size:25px;
+    background: -webkit-linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background: -moz-linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background: linear-gradient(left, rgba(254, 224, 136,0.9) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% .8em; 
+    background-position: 100% .5em;
+    transition: 0.8s;    
+}
+.c-marker.is-active{
+    background-position: 0% .5em;
+}
+#sotsuten img{
+    float: left;
+    height: 700px;
+}
+#sotsuten_setsumei{
+    width: 600px;
+    margin-left: 10px;
+    float: left;
+}
+
+#sotsuten_setsumei h4{
+    font-weight: normal;
+    display: block;
+    float: left;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+#sotsuten_setsumei h5{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: normal;
+}
+.honbun{
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+#nagare{
+    border-left: solid 2px #333333;
+}
+.nagare_setsumei{
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 26px;
+    clear: both;
+}
+br{
+    display: none;
+}
+h3 br{
+    display: inline;
+}
+#nagare_illust{
+    height: 328px;
+    margin-left: 24px;
+    margin-bottom: 32px;
+}
+#nagare_illust img{
+    height: 328px;
+    margin-left: 16px;
+    margin-right: 16px;
+    float: left;
+}
+#nagare_illust p{
+    margin-top: 148px;
+    font-size: 24px;
+    float: left;
+}
+.sakuhin{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 224px;
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+}
+.setsumei{
+    width: 600px;
+    padding-top: 24px;
+}
+.settei{
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+.settei h4{
+    margin-bottom: 12px;
+    font-weight: normal;
+    font-size: 24px;
+}
+#sotsuten,#nouchiku,#sports{
+    padding-top: 100px;
+    margin-top: -100px;
+}
+#footer{
+    height: 120px;
+    background-color:#333333; 
+    position: relative;
+}
+#footer img{
+    margin-right: 232px;
+    text-align: center;
+    float: left;
+}
+#footer_menu{
+    width: 1000px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: left;
+    position: relative; 
+}
+#footer_menu ul{
+    margin-top: 16px;
+    width: 700px;
+    top: 36px;
+    right: 0;
+    position: absolute;
+}
+#footer_menu li {
+    margin-left:62px;
+    margin-bottom:4px;
+    float: left;
+    font-size: 20px;
+    list-style: none;
+    color: #ffffff;
+}
+#footer_menu li a{
+    color: #ffffff;
+    padding-bottom:4px;
+    text-decoration: none; 
+    display: block;
+}
+#footer_menu li a:hover{
+    color: #cccccc;
+}
+#sub_nav{
+    margin-top: 4px;
+    position: absolute;
+    left: 696px;
+    display: block;
+}
+#sub_nav span{
+    float: left;
+    background-color: #ffffff;
+    right: 240px;
+    width: 1px;
+    height: 20px;
+    margin-top: 0px;
+}
+#sub_nav li{
+    font-size: 15px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 20px;
+}
+#footer_menu p{
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    clear: both;
+    position: absolute;
+    left: 43%;
+    bottom: -24px;
+}
+
+.fadeInUpTrigger{
+opacity: 0;
+}
+
+.fadeIn {
+    animation-name: fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}  
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+@media screen and (max-width: 1399px) {
+	/* 1399px以下に適用されるCSS（PC用） */
+    #wrap{
+        min-width: 600px;   
+    }
+    #header{
+        width: 560px;    
+    }  
+    #header_menu li{
+        margin-left: 40px;
+    }    #footer{
+        height: 180px;
+        position: static;
+    }
+    #main{
+        margin-bottom: 184px;
+    }
+    #wrap h3{
+        margin-top: 24px;
+        text-align: center;
+        font-size: 26px;
+        line-height: normal;
+    }
+    #sotsuten{
+        width: 540px;
+        margin-bottom: 184px;
+        display: block;
+        justify-content: none;
+    }
+    .c-marker{
+        font-size: 23px;
+    }
+    #sotsuten img{
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        display: block;
+    }
+    #sotsuten_setsumei{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        display: block;
+    }
+    .honbun{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: normal;
+    }
+    .nagare_setsumei{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    #nagare_illust{
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rahu{
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: 232px;
+        display: block;
+    }
+    #nagare_illust img{
+        float: none;
+        margin:0;
+    }
+    #nagare_illust p{
+        margin-left: 284px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        transform:rotate(90deg);
+        transform-origin:0 0;
+        float: none;
+    }
+    .sakuhin{
+        width: 540px;
+        margin-bottom: 184px;
+        display: block;
+        justify-content: none;
+    }
+    .sakuhin img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .setsumei{
+        width: 540px;
+        margin-left: 4px;
+        padding-top: 0px;
+    }
+    .settei{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    }
+    .settei h4{
+        font-size: 22px;
+    }
+    #footer img{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+    #footer_menu {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #footer_menu ul{
+        top: 90px;
+        left: 0px;
+        margin-left: 44px;
+        margin-right: auto;
+    }
+    #footer_menu li{
+        margin-left: 32px;
+        font-size: 18px; 
+    }
+    #footer_menu #sub_nav{
+        top: 90px;
+        left: 280px;
+    }
+    #sub_nav span{
+        left: 240px;
+        right: 0px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    #sub_nav li{
+        font-size: 15px; 
+        margin-left: 4px;
+        margin-right: 24px;
+        margin-top: 4px;
+    }
+    #footer_menu p{
+        padding-top: 40px;
+        position: static;
+    }
+}
+@media screen and (max-width: 599px) {
+    /* 599px以下に適用されるCSS（スマホ用） */
+    #wrap{
+        min-width: 320px;   
+    }
+    #header{
+        width: 80%;
+    }
+    .nav_toggle {
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;    
+        z-index: 3;
+        left: 96%;
+}
+    .nav_toggle:hover{
+        cursor: pointer;
+    }
+    #logo_menu{
+        display: block;
+        margin-left: 40px;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+   .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+}
+   .nav_toggle i:nth-child(1) {
+        top: 0;
+}
+   .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+}
+   .nav_toggle i:nth-child(3) {
+        bottom: 0;
+}
+   .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+}
+   .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+}
+   .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+}
+    
+   #header_menu ul{
+        position: static; 
+}
+   #header_menu li {
+        width: 96px;
+        margin-left: 64px;
+        margin-top: 40px;
+        float: none;
+        font-size: 25px;
+        list-style: none;
+        border: none;
+}
+   #header_menu li a{
+        border-bottom: solid 1px #333333;
+    }
+   #header_menu li a:hover{
+        background: none;
+}
+   .dropdown{
+        display: block;
+        border-left: solid 1px #333333;
+        margin-left: 8px;
+        margin-top: 24px;
+}
+   #header_menu li:hover .dropdown{
+        display: block;
+        width: 160px;
+        top: auto;
+        right: auto;
+}
+   #header_menu .dropdown li{
+        margin-top: 16px;
+        margin-left: 8px;
+        color: #333333;
+        background-color: #ffffff;
+        font-size: 21px;
+}
+   #header_menu .dropdown li a{
+        border: none;
+    }
+   #header_menu .dropdown li a:hover{
+        color: #333333;
+        background-color: #ffffff;
+}
+
+   .nav {
+        position: absolute;
+        top: 0;
+        left: 24%;
+        bottom: 0;
+        padding-top: 160px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+}
+   .nav.show {
+        opacity: 1;
+        visibility: visible;
+}
+    h2 img{
+        width: 276px;
+    }
+    #porster_first{
+        display: none;
+    }
+    #porster_first_res{
+        max-width: 100%;
+        display: block;
+    }
+    #main{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #wrap h3{
+        font-size: 20px;
+    }
+    #sotsuten{
+        width: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .c-marker{
+        font-size: 20px;
+    }
+    #sotsuten img{
+        max-width: 100%;
+        height: auto;
+    }
+    #sotsuten_setsumei{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #sotsuten_setsumei h4{
+        margin-left: 0;
+        float: none;
+    }
+    .honbun{
+        width: 300px;
+        font-size: 14px;
+    }
+    .nagare_setsumei{
+        margin-left: 0;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    br{
+        display: inline;
+    }
+    #nagare{
+        border-left: none;
+    }
+    #nagare_illust p{
+        margin-left: 164px;
+    }
+    .sakuhin{
+        width: 300px;
+    }
+    .sakuhin img{
+        max-width: 100%;
+    }
+    .setsumei{
+        width: 300px;
+    }
+    .settei{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+        line-height: 23px;
+    }
+    .settei .c-marker{
+        font-size: 15px;
+    }
+    .settei h4{
+        font-size: 15px;
+    }
+    
+    #footer{
+        width: auto;
+        height: 300px;
+    }
+    #footer img{
+        margin-bottom: 8px;
+    }
+    #footer_menu{
+        width: 300px;
+    }
+    #footer_menu ul{
+        width: 180px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 28px;
+        border-bottom: solid 1px #ffffff;
+    }
+    #footer_menu li{
+        width: 180px;
+        font-size: 22px;
+        margin-left: 0;
+        margin-bottom: 6px;
+        padding-top: 8px;
+        text-align: center;
+        border-top: solid 1px #fafafa;
+    }
+    #footer_menu #sub_nav{
+        width: 200px;
+        top: 210px;
+        left: 32px;
+        border: none;
+
+    }
+    #sub_nav span{
+        display: none;
+    }
+    #sub_nav li{
+        width: auto;
+        font-size: 17px;
+        margin-top: px;
+        margin-right: 18px;
+        margin-bottom: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border: none;
+    }
+    #footer_menu p{
+        padding-top: 170px;
+    }
+    }

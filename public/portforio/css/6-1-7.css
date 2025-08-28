@@ -1,0 +1,197 @@
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 94%;
+    margin: 160px auto;
+}
+
+.slider .slick-slide {
+    transform: scale(0.9);
+    /*左右の画像のサイズを80%に*/
+    transition: all .5s;
+    /*拡大や透過のアニメーションを0.5秒で行う*/
+    margin: 0 32px;
+    width: 484px;
+    height: 792px;
+    background-color: #ffffff;
+}
+
+.slider .slick-slide.slick-center {
+    transform: scale(1);
+    /*中央の画像のサイズだけ等倍に*/
+    opacity: 1;
+    /*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 1000px;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    width: 160px;
+    height: 10px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 20vw;
+    background: url(../img/yazirushi_left.png) no-repeat;
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 20vw;
+    background: url(../img/yazirushi_right.png) no-repeat;
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+    outline: none;
+    border-radius: 50%;
+    display: block;
+    background: #EEE;
+    /*ドットボタンの色*/
+}
+
+.slick-dots li:before {
+    background: #666;
+    /*ドットボタンの現在地表示の色*/
+}
+
+@media screen and (max-width:959px) {
+
+    .slider .slick-slide {
+        width: 360px;
+        height: 640px;
+    }
+
+    .slider-text {
+        font-size: 13px;
+        line-height: 16px;
+        width: 264px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider-text img {
+        display: block;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+    }
+
+    .slick-inner h4 {
+        font-size: 18px;
+        padding-top: 64px;
+        margin-bottom: 32px;
+        text-align: center;
+        letter-spacing: 0.2em;
+    }
+
+    .menu_hinmoku {
+        width: 264px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nedan {
+        font-size: 12px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 930px;
+        width: 80px;
+    }
+
+    .slick-prev {
+        /*戻る矢印の位置と形状*/
+        left: 20%;
+        background: url(../img/yazirushi_left_res.png) no-repeat;
+    }
+
+    .slick-next {
+        /*次へ矢印の位置と形状*/
+        right: 20%;
+        background: url(../img/yazirushi_right_res.png) no-repeat;
+    }
+
+
+}
+
+@media screen and (max-width:519px) {
+
+    .slider .slick-slide {
+        width: 320px;
+        height: 600px;
+    }
+
+    .slider-text {
+        font-size: 13px;
+        width: 256px;
+    }
+
+    .slider-text img {
+        margin-bottom: 32px;
+    }
+
+    .slick-inner h4 {
+        font-size: 16px;
+        padding-top: 56px;
+        margin-bottom: 32px;
+        letter-spacing: 0.2em;
+    }
+
+    .menu_hinmoku {
+        width: 256px;
+    }
+
+    .nedan {
+        font-size: 12px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 888px;
+        width: 64px;
+    }
+
+    .slick-prev {
+        /*戻る矢印の位置と形状*/
+        left: 8%;
+        background: url(../img/yazirushi_left_res_short.png) no-repeat;
+    }
+
+    .slick-next {
+        /*次へ矢印の位置と形状*/
+        right: 8%;
+        background: url(../img/yazirushi_right_res_short.png) no-repeat;
+    }
+
+}
