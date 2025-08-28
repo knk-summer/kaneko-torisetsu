@@ -38,29 +38,6 @@ function App() {
     }
   `
 
-  const cssNavIcon = css`
-    position: fixed;
-    top: 0px;
-    right: 0px;
-  `
-
-    const cssNavBg = css`
-    cursor: pointer;
-  `
-  const cssNavHamburgerLines = css`
-    position: absolute;
-    top: 20px;
-    right: 16px;
-    cursor: pointer;
-  `
-  const cssNavLine = css`
-    display: block;
-    width: 40px;
-    height: 2px;
-    background-color: #FFFFFF;
-    margin-bottom: 10px;
-  `
-
   const cssFV = css`
     margin-bottom: 40px;
   `
@@ -253,9 +230,106 @@ function App() {
     ]
   ]
 
+  const [onNavHamburger, setOnNavHamburger]= useState(false);
   const [onWorkModal, setOnWorkModal]= useState(false);
   let selectCardIndex = null;
 
+  function Nav() {
+    const cssNavIcon = css`
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+  `
+
+    const cssNavBg = css`
+    cursor: pointer;
+  `
+  const cssNavHamburgerLines = css`
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    cursor: pointer;
+  `
+  const cssNavLine = css`
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+  `
+  const cssNavHamburgerArea = css`
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    height: 280px;
+    background-color: #FFF2C5;
+    border: solid 2px #E9D9A2;
+    box-shadow: -4px 4px rgba(0, 0, 0, 0.2);
+
+  `
+  const cssNavHamburgerText = css`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;
+
+    & p {
+        margin-bottom: 32px;
+    }
+
+    & a {
+    text-decoration: none;
+    color: #214665;
+    z-index: 3;
+    }
+
+    & a:hover {
+    text-decoration: none;
+    color: #C73A18;
+    }
+  `
+
+  function NavIconClick() {
+    if (!onNavHamburger) {
+      setOnNavHamburger(true);
+    } else {
+      setOnNavHamburger(false);
+    }
+  }
+
+  function NavHamburger() {
+    if (onNavHamburger){
+      return(
+        <div css={cssNavHamburgerArea}>
+          <div css={cssNavHamburgerText} >
+            <p><a href="#first_view">TOP</a></p>
+            <p><a href="#about_me">自己紹介</a></p>
+            <p><a href="#works">作品一覧</a></p>
+          </div>
+        </div>
+      )
+    }
+
+  }
+
+    return(
+      <div id="nav">
+        <div css={cssNavIcon} onClick={NavIconClick}>
+          <img src={navBg} css={cssNavBg} />
+          <div css={cssNavHamburgerLines}>
+            <span css={cssNavLine}></span>
+            <span css={cssNavLine}></span>
+          </div>
+        </div>
+        <NavHamburger />
+      </div>
+    )
+  }
+  
   function WorkCardClick(index) {
     selectCardIndex = String(index);
     setOnWorkModal(selectCardIndex);
@@ -406,7 +480,7 @@ function App() {
   }
 
   function WorksDisplay() {
-    
+
     return (
       <div css={cssWorksView}>
         {
@@ -480,21 +554,15 @@ function App() {
       />
       <WorkModal />
         <div css={cssMain}>
-          <div css={cssNavIcon}>
-            <img src={navBg} css={cssNavBg} />
-            <div css={cssNavHamburgerLines}>
-              <span css={cssNavLine}></span>
-              <span css={cssNavLine}></span>
-            </div>
-          </div>
-          <div id="first-view" css={cssFV}>
+          <Nav />
+          <div id="first_view" css={cssFV}>
             <picture>
               <source media="(max-width: 767px)" srcSet={fvSp} />
               <source media="(min-width: 768px)" srcSet={fvPc} />
               <img src={fvPc} css={cssImg} alt="かねこのトリセツ この度はかねこに興味を持っていただき誠にありがとうございます。ぜひ当ページをご覧になってから、ご使用を検討いただけますと幸いです。"/>
             </picture>
           </div>
-          <div id="AboutMe">
+          <div id="about_me">
           <h2>製品情報</h2>
           <div css={cssAboutMe}>
             <div>
