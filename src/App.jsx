@@ -239,6 +239,7 @@ function App() {
     position: fixed;
     top: 0px;
     right: 0px;
+    clip-path: polygon(100% 0, 100% 100%, 89% 100%, 0 11%, 0 0);
     z-index: 2;
   `
 
@@ -313,7 +314,9 @@ function App() {
     return(
       <div id="nav">
         <div css={cssNavIcon} onClick={NavIconClick}>
-          <img src={navBg} css={cssNavBg} />
+          <svg css={cssNavBg} width="108" height="93" viewBox="0 0 108 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M108 85.0547C108 90.9896 101.078 94.2317 96.5187 90.4323L48 50L2.85306 12.3775C-2.17654 8.18619 0.787278 -9.37283e-06 7.33436 -8.80047e-06L101 -6.11959e-07C104.866 -2.73984e-07 108 3.13401 108 7L108 85.0547Z" fill="#265E8C"/>
+          </svg>
           <div css={cssNavHamburgerLines}>
             <span css={cssNavLine}></span>
             <span css={cssNavLine}></span>
